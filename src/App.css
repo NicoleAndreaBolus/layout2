@@ -1,0 +1,124 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111; /* dark background */
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #baf2b2;
+  border: 5px solid green;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Style */
+.section {
+  flex: 1;  /* make each section expand */
+  border: 5px solid blue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #cceeff;
+}
+
+.box {
+  flex: 1;
+  background: peachpuff;
+  border: 5px solid salmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Top row with nested red boxes */
+.peach-box {
+  flex: 1;
+  background: peachpuff;
+  border: 5px solid salmon;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.red-group {
+  display: flex;
+  gap: 2px;
+  background: red;
+  border: 2px solid red;
+  flex: 1;
+  justify-content: space-between;
+}
+.red-group .inner {
+  flex: 1;
+  border: 5px solid red;
+  background: lightpink;
+  padding: 10px;
+}
+
+/* Middle Section */
+.middle {
+  flex: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.middle .left {
+  flex: 2;
+  background: lightpink;
+  border: 5px solid brown;
+}
+
+.middle .right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.middle .right div {
+  flex: 1;
+  background: lightpink;
+  border: 5px solid brown;
+}
+
+/* Bottom Section */
+.bottom {
+  flex: 1;
+  border: 5px solid blue;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  background: #cceeff;
+}
+
+.bottom .side {
+  flex: 1;
+  border: 5px solid rgb(96, 96, 126);
+  background: lavender;
+}
+
+.bottom .center {
+  flex: 2;
+  display: flex;
+  gap: 10px;
+}
+
+.bottom .center div {
+  flex: 1;
+  border: 5px solid salmon;
+  background: peachpuff;
+}
