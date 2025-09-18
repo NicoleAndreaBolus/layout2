@@ -1,11 +1,11 @@
 import './App.css'
 
 /* ---------- HEADER ---------- */
-function HeaderContainer() {
+function TopBox() {
   return <div className="box"></div>;
 }
 
-function HeaderContainer2Content(props) {
+function NameText(props) {
   return (
     <div className="inner">
       <p>{props.name}</p>
@@ -13,60 +13,60 @@ function HeaderContainer2Content(props) {
   );
 }
 
-function HeaderContainer2() {
+function PeachGroup() {
   return (
     <div className="peach-box">
       <div className="red-group">
-        <HeaderContainer2Content name="Nicole" />
-        <HeaderContainer2Content name="Bolus" />
+        <NameText name="Nicole" />
+        <NameText name="Bolus" />
       </div>
     </div>
   );
 }
 
-function Header() {
+function TopPart() {
   return (
     <div className="section">
-      <HeaderContainer />
-      <HeaderContainer2 />
-      <HeaderContainer />
+      <TopBox />
+      <PeachGroup />
+      <TopBox />
     </div>
   );
 }
 
 /* ---------- BODY ---------- */
-function BodyContainer() {
+function LeftPanel() {
   return <div className="left"></div>;
 }
 
-function BodyContainer2Content() {
+function RightPanelItem() {
   return <div></div>;
 }
 
-function BodyContainer2() {
+function RightPanel() {
   return (
     <div className="right">
-      <BodyContainer2Content />
-      <BodyContainer2Content />
+      <RightPanelItem />
+      <RightPanelItem />
     </div>
   );
 }
 
-function Body() {
+function MidPart() {
   return (
     <div className="middle">
-      <BodyContainer />
-      <BodyContainer2 />
+      <LeftPanel />
+      <RightPanel />
     </div>
   );
 }
 
 /* ---------- FOOTER ---------- */
-function FooterContainer1() {
+function SideBlock() {
   return <div className="side"></div>;
 }
 
-function FooterContainer2(props) {
+function CenterText(props) {
   return (
     <div>
       <p>{props.text}</p>
@@ -74,21 +74,21 @@ function FooterContainer2(props) {
   );
 }
 
-function FooterContainerCenter() {
+function CenterGroup() {
   return (
     <div className="center">
-      <FooterContainer2 text="C-PCIT9" />
-      <FooterContainer2 text="IT3B" />
+      <CenterText text="C-PCIT9" />
+      <CenterText text="IT3B" />
     </div>
   );
 }
 
-function Footer() {
+function BottomPart() {
   return (
     <div className="bottom">
-      <FooterContainer1 />
-      <FooterContainerCenter />
-      <FooterContainer1 />
+      <SideBlock />
+      <CenterGroup />
+      <SideBlock />
     </div>
   );
 }
@@ -98,9 +98,9 @@ function App() {
   return (
     <div className="scale-wrapper">
       <div className="container">
-        <Header />
-        <Body />
-        <Footer />
+        <TopPart />
+        <MidPart />
+        <BottomPart />
       </div>
     </div>
   );
