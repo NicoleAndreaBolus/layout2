@@ -1,44 +1,109 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+/* ---------- HEADER ---------- */
+function HeaderContainer() {
+  return <div className="box"></div>;
+}
+
+function HeaderContainer2Content(props) {
+  return (
+    <div className="inner">
+      <p>{props.name}</p>
+    </div>
+  );
+}
+
+function HeaderContainer2() {
+  return (
+    <div className="peach-box">
+      <div className="red-group">
+        <HeaderContainer2Content name="Nicole" />
+        <HeaderContainer2Content name="Bolus" />
+      </div>
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="section">
+      <HeaderContainer />
+      <HeaderContainer2 />
+      <HeaderContainer />
+    </div>
+  );
+}
+
+/* ---------- BODY ---------- */
+function BodyContainer() {
+  return <div className="left"></div>;
+}
+
+function BodyContainer2Content() {
+  return <div></div>;
+}
+
+function BodyContainer2() {
+  return (
+    <div className="right">
+      <BodyContainer2Content />
+      <BodyContainer2Content />
+    </div>
+  );
+}
+
+function Body() {
+  return (
+    <div className="middle">
+      <BodyContainer />
+      <BodyContainer2 />
+    </div>
+  );
+}
+
+/* ---------- FOOTER ---------- */
+function FooterContainer1() {
+  return <div className="side"></div>;
+}
+
+function FooterContainer2(props) {
+  return (
+    <div>
+      <p>{props.text}</p>
+    </div>
+  );
+}
+
+function FooterContainerCenter() {
+  return (
+    <div className="center">
+      <FooterContainer2 text="C-PCIT9" />
+      <FooterContainer2 text="IT3B" />
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <div className="bottom">
+      <FooterContainer1 />
+      <FooterContainerCenter />
+      <FooterContainer1 />
+    </div>
+  );
+}
+
+/* ---------- APP ---------- */
 function App() {
   return (
-    <div className="container">
-      {/* Top Section */}
-      <div className="section">
-        <div className="box"></div>
-        <div className="peach-box">
-          <div className="red-group">
-            <div className="inner"></div>
-            <div className="inner"></div>
-          </div>
-        </div>
-        <div className="box"></div>
-      </div>
-
-      {/* Middle Section */}
-      <div className="middle">
-        <div className="left"></div>
-        <div className="right">
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="bottom">
-        <div className="side"></div>
-        <div className="center">
-          <div></div>
-          <div></div>
-        </div>
-        <div className="side"></div>
+    <div className="scale-wrapper">
+      <div className="container">
+        <Header />
+        <Body />
+        <Footer />
       </div>
     </div>
   );
 }
 
 export default App;
-
