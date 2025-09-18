@@ -16,18 +16,18 @@ html, body, #root {
   height: 1080px;  
   background: #baf2b2;
   border: 10px solid green;
-  padding: 50px;
+  padding: 40px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
 }
 
 /* Section Style */
 .section {
-  flex: 1;
+  flex: 0.5;
   border: 10px solid blue;
-  padding: 50px;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -77,7 +77,7 @@ html, body, #root {
 
 /* Middle Section */
 .middle {
-  flex: 2;
+  flex: 3;
   display: flex;
   gap: 20px;
 }
@@ -103,9 +103,9 @@ html, body, #root {
 
 /* Bottom Section */
 .bottom {
-  flex: 1;
+  flex: 0.5;
   border: 10px solid blue;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   gap: 10px;
   background: #cceeff;
